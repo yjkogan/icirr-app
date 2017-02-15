@@ -1,3 +1,6 @@
+# Currently Deprecated
+See https://github.com/chi-immigration-task-force/icirr-app-android and https://github.com/chi-immigration-task-force/icirr-app-ios instead
+
 # icirr-app
 
 ## Overview
