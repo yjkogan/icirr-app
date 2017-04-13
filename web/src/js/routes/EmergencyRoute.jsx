@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import shallowCompare from 'react-addons-shallow-compare';
 
-import Body from '../components/Body';
-import EmergencyHotline from '../components/EmergencyHotline';
-import emergencyKyr from '../../static/emergency-kyr';
+import Body from 'components/Body';
+import EmergencyHotline from 'components/EmergencyHotline';
+import emergencyKyr from 'static/emergency-kyr';
 
 class EmergencyRoute extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -36,6 +36,9 @@ class EmergencyRoute extends React.Component {
                 <EmergencyHotline key={hotline.name} {...hotline} />
               );
             })}
+          </div>
+          <div className='EmergencyRoute-kyr'>
+            <ReactMarkdown source={emergencyKyr} />
           </div>
         </Body>
       </div>
