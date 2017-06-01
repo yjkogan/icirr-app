@@ -1,3 +1,4 @@
+// require('leaflet/dist/leaflet.css');
 require('../css/index.scss');
 require.context('../images', true, /^\.\//);
 

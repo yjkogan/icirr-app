@@ -66,6 +66,11 @@ module.exports = {
         include: [
           path.join(cwd, 'src/css'),
         ],
+      }, {
+        test: /\.css$/,
+        use: [
+          'css-loader?sourceMap',
+        ],
       },
     ]),
   },
