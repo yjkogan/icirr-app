@@ -1,6 +1,5 @@
 .EmergencyRoute {
   height:100%;
-  padding-bottom:0.6rem;
 }
 
 .EmergencyRoute-kyr {
@@ -12,8 +11,6 @@
 }
 
 .EmergencyRoute-hotlines {
-  border-top:1px solid $black;
-  padding:1.2rem 0;
   margin:0 1.2rem;
 }
 
@@ -24,20 +21,8 @@
 }
 
 .EmergencyRoute-lawyerNumber {
-  display:flex;
   font-size:1.6rem;
-  padding:1.2rem;
-}
-
-.EmergencyRoute-lawyerNumberLabel {
-  flex:0 0 auto;
-  font-weight:700;
-  margin-right:1.2rem;
-}
-
-.EmergencyRoute-lawyerNumberLink {
-  flex:1 0 0%;
-  min-width:0;
+  padding:1.2rem 1.2rem 0;
 }
 
 .EmergencyRoute-tab {

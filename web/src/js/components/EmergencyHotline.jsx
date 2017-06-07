@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -9,26 +10,22 @@ class EmergencyHotline extends React.Component {
   render() {
     return (
       <div className='EmergencyHotline'>
-        <div className='EmergencyHotline-name'>{this.props.name}</div>
-        <div className='EmergencyHotline-number'>
-          <a href={`tel:${this.props.number}`}>{this.props.number}</a>
+        <div className='EmergencyHotline-content'>
+          <div className='EmergencyHotline-name'>{this.props.name}</div>
+          <a className='EmergencyHotline-number' href={`tel:${this.props.number}`}>{this.props.number}</a>
         </div>
-        {this.props.subNumber &&
-          <div className='EmergencyHotline-subNumber'>
-            (<a href={`tel:${this.props.subNumber}`}>{this.props.subNumber}</a>)
-          </div>
+        {_.isFunction(this.props.onInfoClick) &&
+          <i className='EmergencyHotline-icon icon info' onClick={this.props.onInfoClick}>i</i>
         }
-        <div className='EmergencyHotline-additionalInfo'>{this.props.additionalInfo}</div>
       </div>
     );
   }
 }
 
 EmergencyHotline.propTypes = {
-  additionalInfo: React.PropTypes.string.isRequired,
   name: React.PropTypes.string.isRequired,
   number: React.PropTypes.string.isRequired,
-  subNumber: React.PropTypes.string.isRequired,
+  onInfoClick: React.PropTypes.func,
 };
 
 export default EmergencyHotline;

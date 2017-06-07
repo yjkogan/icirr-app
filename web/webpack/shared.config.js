@@ -37,6 +37,7 @@ module.exports = {
       'components': path.join(cwd, './src/js/components'),
       'constants': path.join(cwd, './src/js/constants'),
       'env': path.join(cwd, './src/js/env'),
+      'localization': path.join(cwd, './src/js/localization'),
       'routes': path.join(cwd, './src/js/routes'),
       'selectors': path.join(cwd, './src/js/selectors'),
       'state': path.join(cwd, './src/js/state'),

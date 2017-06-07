@@ -3,5 +3,14 @@
 }
 
 .MoreRoute-aboutLink {
+  display:flex;
   font-size:1.2rem;
+}
+
+.MoreRoute-aboutLinkText {
+  flex:1 0 0%;
+}
+
+.MoreRoute-aboutLinkIcon {
+  flex:0 0 auto;
 }

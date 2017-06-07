@@ -13,22 +13,22 @@ class SignupForm extends React.Component {
     return (
       <form className='Form SignupForm' onSubmit={this.props.handleSubmit}>
         <div className='SignupForm-title'>
-          Join the Movement to Rise Up & Organize
+          {this.props.translate('signup.title')}
         </div>
         <Field
           className='SignupForm-textInput'
           component='input'
           name='name'
-          placeholder='Name'
+          placeholder={this.props.translate('signup.namePlaceholder')}
           type='text' />
         <Field
           className='SignupForm-textInput'
           component='input'
           name='email'
-          placeholder='Email'
+          placeholder={this.props.translate('signup.emailPlaceholder')}
           type='email' />
         <div className='SignupForm-submitButton'>
-          <Button modifierClassName='Button--primary' type='submit'>SIGN UP</Button>
+          <Button modifierClassName='Button--primary' type='submit'>{this.props.translate('signup.buttonText')}</Button>
         </div>
       </form>
     );
@@ -37,6 +37,7 @@ class SignupForm extends React.Component {
 
 SignupForm.propTypes = {
   handleSubmit: React.PropTypes.func.isRequired,
+  translate: React.PropTypes.func.isRequired,
 };
 
 SignupForm = reduxForm({

@@ -1,6 +1,8 @@
 .EmergencyHotline {
-  border:1px solid $black;
-  border-radius:0.3rem;
+  align-items:center;
+  background-color:$icirr-pale-purple;
+  box-shadow: 0.1rem 0.1rem 0.1rem $black;
+  display:flex;
   font-size:1.4rem;
   margin-bottom:1.2rem;
   padding:1.2rem;
@@ -9,9 +11,23 @@
   }
 }
 
+.EmergencyHotline-content {
+  flex:1 0 0%;
+}
+
+.EmergencyHotline-icon {
+  align-items:center;
+  border: 1px solid $black;
+  border-radius:36px;
+  display:flex;
+  flex:0 0 3.6rem;
+  height:3.6rem;
+  justify-content: center;
+}
+
 .EmergencyHotline-name {
-  font-weight:700;
 }
 
 .EmergencyHotline-number {
+  display:inline-block;;
 }

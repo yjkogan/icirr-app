@@ -3,10 +3,10 @@
 ## Overview
 This is a cross-platform [Cordova](https://cordova.apache.org/) application running assets built via webpack.
 
-#### Getting started quickly
-We use [github issues](https://github.com/chi-immigration-task-force/icirr-app/issues) to track the tasks we need to do for this project. Right now this hasn't been filled in but I'm hoping to get to it this week...
+## Getting started
+We use [github issues](https://github.com/chi-immigration-task-force/icirr-app/issues) to track the tasks we need to do for this project.
 
-If you're interested in getting involved technically, all you need to do is clone the repository and [install yarn](https://github.com/chi-immigration-task-force/icirr-app#install-yarn). Then check out the section on [developing](https://github.com/chi-immigration-task-force/icirr-app#developing).
+If you're interested in getting involved technically, all you need to do is clone the repository and [install yarn](https://github.com/chi-immigration-task-force/icirr-app#installation). Then check out the section on [developing](https://github.com/chi-immigration-task-force/icirr-app#developing).
 
 If you don't know React yet, Facebook's [React tutorial](https://facebook.github.io/react/tutorial/tutorial.html) is a good place to start.
 
@@ -19,6 +19,18 @@ First, clone the repository by running `git clone https://github.com/chi-immigra
 Follow the instructions [here](https://yarnpkg.com/lang/en/docs/install/#mac-tab).
 Using whatever approach you prefer. Ping @yjkogan if you need help.
 
+## Developing
+We're doing development like it's a website and then copying the results of a
+production build of the web assets into cordova to generate the native apps.
+To get started, from inside `icirr-app/web/`, run `yarn && yarn start`. You should then be able to see the existing site at `http://localhost:3000/`.
+
+All the website files live in `/web/src`. Feel free to poke around! The
+primary technologies we use are:
+
+1. [React](https://facebook.github.io/react/)
+2. [Redux](http://redux.js.org/)
+
+## Getting started with the native app (You probably don't need to do this)
 ### Install Cordova
 Instructions directly from cordova are [here](https://cordova.apache.org/docs/en/latest/guide/cli/index.html)
 
@@ -48,25 +60,13 @@ And you're done! You may need to install more than just that one build tool. If 
 2. Open Xcode at least once to accept the license agreement and
   install the command line tools
 
-## Running the app
+## Running the native app
 ### Initializing the platforms and plugins
 Run `./project.sh -i` to initialize and install all the plugins and platforms. **Untested on a new machine. Please let Yonatan know if you hit any issues.**
 
 Once the platforms are installed, you can run `cordova emulate ios --target="iPad-Air-2, 10.1"` to open the iPad Simulator. If you hit **xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance**, try running `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`. If that doesn't work or you want more info, check out [this issue](https://github.com/nodejs/node-gyp/issues/569#issuecomment-255589932).
 
-## Developing
-We're doing development like it's a website and then copying the results of a
-production build of the web assets into cordova to generate the native apps.
-To get started, from inside `icirr-app/web/`, run `yarn && yarn start`. You should then be able to see the existing site at `http://localhost:3000/`.
-
-All the website files live in `/web/src`. Feel free to poke around! The
-primary technologies we use are:
-
-1. [React](https://facebook.github.io/react/)
-2. [Redux](http://redux.js.org/)
-
-
-## Debugging
+## Debugging the native app
 ### iOS
 #### Debugging the native <-> webview interface
 Using Xcode, open `platforms/ios/IcirrApp.xcworkspace`. From here, you can run the app normally, set breakpoints, see console logs, etc. Here's Cordova's [iOS debugging page](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html#debugging)

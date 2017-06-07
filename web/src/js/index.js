@@ -8,16 +8,20 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { compose, createStore } from 'redux';
 import persistState from 'redux-localstorage';
+
+import strings from 'localization';
+
 import rootReducer from './state';
 
-
-const enhancer = compose(
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const enhancer = composeEnhancers(
   persistState('settings'),
 );
 
 const initialState = undefined; // eslint-disable-line no-undefined
 
 const store = createStore(rootReducer, initialState, enhancer);
+strings.setLanguage(store.getState().settings.language);
 
 import App from './App';
 

@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 
@@ -9,12 +10,21 @@ import KnowYourRightsRoute from 'routes/KnowYourRightsRoute';
 import MapRoute from 'routes/MapRoute';
 import MoreRoute from 'routes/MoreRoute';
 
+import withTranslate from 'localization/withTranslate';
+
 class NavigationRoute extends React.Component {
   shouldComponentUpdate() {
     return true;
   }
 
   render() {
+    // TODO (YK 2017-04-18): Memoize
+    const translatedTabs = _.map(NavigationRoute.tabs, (tab) => {
+      return {
+        ...tab,
+        name: this.props.translate(_.join(['navigation', 'tabs', tab.key], '.')),
+      };
+    });
     return (
       <div className='NavigationRoute'>
         <ICIRRHeader />
@@ -27,7 +37,7 @@ class NavigationRoute extends React.Component {
             <Redirect from='*' to='/map' />
           </Switch>
         </div>
-        <TabBar tabs={NavigationRoute.tabs} tabClassName='NavigationRoute-tab' />
+        <TabBar tabs={translatedTabs} tabClassName='NavigationRoute-tab' />
       </div>
     );
   }
@@ -37,24 +47,25 @@ NavigationRoute.tabs = [
   {
     className: 'EmergencyRoute-tab',
     icon: 'ICON',
-    name: 'Emergency',
+    key: 'emergency',
     to: '/emergency',
   },{
     icon: 'ICON',
-    name: 'Map',
+    key: 'map',
     to: '/map',
   }, {
     icon: 'ICON',
-    name: 'My Rights',
+    key: 'myRights',
     to: '/kyr',
   }, {
     icon: 'ICON',
-    name: 'More',
+    key: 'more',
     to: '/more',
   },
 ];
 
 NavigationRoute.propTypes = {
+  translate: React.PropTypes.func.isRequired,
 };
 
-export default NavigationRoute;
+export default withTranslate(NavigationRoute);

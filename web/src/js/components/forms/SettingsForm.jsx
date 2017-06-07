@@ -15,19 +15,19 @@ class SettingsForm extends React.Component {
   render() {
     return (
       <form className='Form SettingsForm'>
-        <LabeledTable label='Settings'>
+        <LabeledTable label={this.props.translate('settings.header')}>
           <LabeledTableRow>
             <TextInput
-              label="Lawyer's Number"
+              label={this.props.translate('settings.lawyerNumberLabel')}
               modifierClassName='TextInput--inline'
               name='lawyerNumber'
               onBlur={this.props.onBlur} />
           </LabeledTableRow>
           <LabeledTableRow>
             <Select
-              label='Language'
+              label={this.props.translate('settings.languageLabel')}
               name='language'
-              onBlur={this.props.onBlur}
+              onChange={this.props.onChange}
               options={SettingsForm.languageOptions} />
           </LabeledTableRow>
         </LabeledTable>
@@ -38,14 +38,16 @@ class SettingsForm extends React.Component {
 
 SettingsForm.languageOptions = [{
   label: 'English',
-  value: 'en-us',
+  value: 'en',
 }, {
-  label: 'Spanish',
-  value: 'es-es',
+  label: 'Español',
+  value: 'es',
 }];
 
 SettingsForm.propTypes = {
   onBlur: React.PropTypes.func.isRequired,
+  onChange: React.PropTypes.func.isRequired,
+  translate: React.PropTypes.func.isRequired,
 };
 
 SettingsForm = reduxForm({
