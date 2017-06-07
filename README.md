@@ -22,7 +22,7 @@ Using whatever approach you prefer. Ping @yjkogan if you need help.
 ## Developing
 We're doing development like it's a website and then copying the results of a
 production build of the web assets into cordova to generate the native apps.
-To get started, from inside `icirr-app/web/`, run `yarn && yarn start`. You should then be able to see the existing site at `http://localhost:3000/`.
+To get started, change directory to `icirr-app/web/`, run `yarn && yarn start`. You should then be able to see the existing site at `http://localhost:3000/`.
 
 All the website files live in `/web/src`. Feel free to poke around! The
 primary technologies we use are:
