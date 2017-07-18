@@ -1,0 +1,23 @@
+.RightsList {
+    display: flex;
+    font-family: Times;
+    align-items:center;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    position:absolute;
+    padding:0.6rem;
+}
+
+.RightsItem h6 {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding:0.6rem;
+}
+
+.RightsItem li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0.5rem;
+}
