@@ -1,19 +1,17 @@
 .RightsList {
-    display: flex;
     font-family: Times;
-    align-items:center;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:center;
-    position:absolute;
-    padding:0.6rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0.6rem;
 }
 
 .RightsItem h6 {
     font-weight: bold;
     font-size: 1.2em;
-    padding:0.6rem;
+    padding: 0.6rem;
+    display: block;
+
 }
 
 .RightsItem li {
