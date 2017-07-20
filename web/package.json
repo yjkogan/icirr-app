@@ -19,6 +19,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "classnames": "^2.2.5",
     "css-loader": "^0.26.2",
+    "csv-loader": "^2.1.1",
     "del": "^2.2.2",
     "eslint": "^3.16.1",
     "eslint-plugin-import": "^2.2.0",

@@ -7,6 +7,14 @@ const imgRegex = /\.(png|jpg|gif|jpeg|svg|ico)$/;
 
 module.exports = {
   loaders: [{
+    test: /\.csv$/,
+    loader: 'csv-loader',
+    options: {
+      dynamicTyping: true,
+      header: true,
+      skipEmptyLines: true
+    }
+  }, {
     test: /\.(eot|svg|ttf|woff|woff2)$/,
     loaders: ['file-loader?name=fonts/[name].[ext]'],
     include: [

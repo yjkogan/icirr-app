@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
-import { InfoWindow, Marker } from 'react-google-maps';
-
 
 import GoogleMapWrapper from 'components/map/GoogleMapWrapper';
+import MarkerWithInfoWindow from 'components/map/MarkerWithInfoWindow';
+
+import naiPartners from 'static/naiPartners.csv';
 
 class MapRoute extends React.Component {
   constructor(props) {
@@ -15,31 +16,31 @@ class MapRoute extends React.Component {
       markers: [],
     };
   }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
-  }
   
   componentDidMount() {
     this.getMarkers();
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
+  }
+
   getMarkers() {
-    const addresses = ['Merchandise Mart, Chicago, IL 60608'];
-    _.forEach(addresses, (address) => {
-      this.geocoder.geocode( { 'address': address}, (results, status) => {
-        if (status === window.google.maps.GeocoderStatus.OK) {
-          const newMarkers = this.state.markers.concat([{
-            position: results[0].geometry.location,
-            key: address,
-            title: address,
-            defaultAnimation: 2,
-          }]);
-          this.setState({
-            markers: newMarkers,
-          });
-        }
-      });
+    // TODO: https://developers.google.com/maps/documentation/javascript/marker-clustering
+    const markers = _.map(naiPartners, (partner) => {
+      return {
+        position: {
+          lat: partner.lat,
+          lng: partner.lng,
+        },
+        key: partner.address,
+        title: partner.address,
+        defaultAnimation: 2,
+      };
+    });
+    console.debug(markers);
+    this.setState({
+      markers,
     });
   }
 
@@ -59,9 +60,7 @@ class MapRoute extends React.Component {
           }>
           {_.map(this.state.markers, (marker) => {
             return (
-              <Marker {...marker}>
-                <InfoWindow content={marker.title} />
-              </Marker>
+              <MarkerWithInfoWindow {...marker} />
             );
           })}
         </GoogleMapWrapper>
