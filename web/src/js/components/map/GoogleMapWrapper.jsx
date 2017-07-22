@@ -4,7 +4,6 @@ import { withGoogleMap, GoogleMap } from 'react-google-maps';
 class GoogleMapWrapper extends React.Component {
   shouldComponentUpdate(/* nextProps, nextState */) {
     return true;
-    // return shallowCompare(this, nextProps, nextState);
   }
   render() {
     return (

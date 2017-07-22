@@ -13,7 +13,6 @@ class MarkerWithInfoWindow extends React.Component {
   }
   shouldComponentUpdate(/* nextProps, nextState */) {
     return true;
-    // return shallowCompare(this, nextProps, nextState);
   }
 
   handleMarkerClick() {

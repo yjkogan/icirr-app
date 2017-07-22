@@ -1,12 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
-import {default as MarkerClusterer} from 'react-google-maps/lib/addons/MarkerClusterer';
+import { default as MarkerClusterer } from 'react-google-maps/lib/addons/MarkerClusterer';
 
 import GoogleMapWrapper from 'components/map/GoogleMapWrapper';
 import MarkerWithInfoWindow from 'components/map/MarkerWithInfoWindow';
 
 import naiPartners from 'static/naiPartners.csv';
+
+const DOWNTOWN_CHICAGO_LAT_LNG = { lat: 41.8781, lng: -87.6298 };
 
 class MapRoute extends React.Component {
   constructor(props) {
@@ -27,7 +29,6 @@ class MapRoute extends React.Component {
   }
 
   getMarkers() {
-    // TODO: https://developers.google.com/maps/documentation/javascript/marker-clustering
     const markers = _.map(naiPartners, (partner) => {
       return {
         position: {
@@ -49,7 +50,7 @@ class MapRoute extends React.Component {
     return (
       <div className='MapRoute'>
         <GoogleMapWrapper
-          defaultCenter={{ lat: 41.8781, lng: -87.6298 }}
+          defaultCenter={DOWNTOWN_CHICAGO_LAT_LNG}
           defaultZoom={8}
           onMapLoad={_.noop}
           onMapClick={_.noop}
