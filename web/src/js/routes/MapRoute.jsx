@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
+import {default as MarkerClusterer} from 'react-google-maps/lib/addons/MarkerClusterer';
 
 import GoogleMapWrapper from 'components/map/GoogleMapWrapper';
 import MarkerWithInfoWindow from 'components/map/MarkerWithInfoWindow';
@@ -58,11 +59,16 @@ class MapRoute extends React.Component {
           mapElement={
             <div style={{ height: '100%' }} />
           }>
-          {_.map(this.state.markers, (marker) => {
-            return (
-              <MarkerWithInfoWindow {...marker} />
-            );
-          })}
+          <MarkerClusterer
+            averageCenter={ true }
+            enableRetinaIcons={ true }
+            gridSize={ 60 }>
+            {_.map(this.state.markers, (marker) => {
+              return (
+                <MarkerWithInfoWindow {...marker} />
+              );
+            })}
+          </MarkerClusterer>
         </GoogleMapWrapper>
       </div>
     );
