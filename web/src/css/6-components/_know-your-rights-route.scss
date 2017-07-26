@@ -1,21 +1,14 @@
 .RightsList {
-    font-family: Times;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
     padding: 0.6rem;
 }
 
-.RightsItem h6 {
-    font-weight: bold;
+.RightsItem-header {
     font-size: 1.2em;
+    font-weight: bold;
     padding: 0.6rem;
-    display: block;
-
 }
 
-.RightsItem li {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.RightsItem-listItem {
+    padding: 1 1rem;
     margin: 0.5rem;
 }
