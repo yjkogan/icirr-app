@@ -1,14 +1,12 @@
 import _ from 'lodash';
 import autoBind from 'react-autobind';
 import React from 'react';
-// import ReactMarkdown from 'react-markdown';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import shallowCompare from 'react-addons-shallow-compare';
 
 import Body from 'components/Body';
 import EmergencyHotline from 'components/EmergencyHotline';
-// import emergencyKyr from 'static/emergency-kyr';
 
 class EmergencyRoute extends React.Component {
   constructor(props) {
