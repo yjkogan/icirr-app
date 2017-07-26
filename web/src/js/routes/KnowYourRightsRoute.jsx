@@ -12,7 +12,7 @@ class KnowYourRightsRoute extends React.Component {
         <div className='RightsList'>
           <div className='RightsItem'>
             <div className='RightsItem-header'>NO WARRANT NO ACCESS</div>
-            <ul className='RightsItem-listItem'>
+            <ul className='RightsItem-list'>
               <li>You do NOT have to answer the door. You have the right to ask the agent (through the closed door) if he has a warrant. If 
             the agent says he has a warrant, ask him to slide it under your door.</li>
               <li>Check if the warrant:
@@ -26,7 +26,7 @@ class KnowYourRightsRoute extends React.Component {
           </div>
           <div className='RightsItem'>
             <div className='RightsItem-header'>REMAIN SILENT</div>
-            <ul className='RightsItem-listItem'>
+            <ul className='RightsItem-list'>
               <li>You have the right to remain silent!</li>
               <li>You can show your 'Knor Your Rights' card</li>
               <li>Remain Calm!</li>
@@ -34,13 +34,13 @@ class KnowYourRightsRoute extends React.Component {
           </div>
           <div className='RightsItem'>
             <div className='RightsItem-header'>DON'T SIGN</div>
-            <ul className='RightsItem-listItem'>
+            <ul className='RightsItem-list'>
               <li>Do NOT sign any documents. Tell the agents you won't sign anything until you talk with a lawyer</li>
             </ul>
           </div>
           <div className='RightsItem'>
             <div className='RightsItem-header'>TAKE DOWN INFORMATION</div>
-            <ul className='RightsItem-listItem'>
+            <ul className='RightsItem-list'>
               <li>If the agents force their way into your home:
                 Take down their names and agent numbers and the license plate numbers of their vehicles.
             </li>
@@ -48,7 +48,7 @@ class KnowYourRightsRoute extends React.Component {
           </div>
           <div className='RightsItem'>
             <div className='RightsItem-header'>IF DETAINED</div>
-            <ul className='RightsItem-listItem'>
+            <ul className='RightsItem-list'>
               <li>Don't sign any documents without legal counsel</li>
               <li>You have the right to make a call. Call a family member or lawyer to tell them where you are.</li>
               <li>***You will not have access to your cellphone - memorize important phone numbers!***</li>
@@ -56,7 +56,7 @@ class KnowYourRightsRoute extends React.Component {
           </div>
           <div className='RightsItem'>
             <div className='RightsItem-header'>PREPARE AN EMERGENCY PLAN</div>
-            <ul className='RightsItem-listItem'>
+            <ul className='RightsItem-list'>
               <li>Always carry with you your Know Your Rights Card</li>
               <li>Carefully choose a responsible adult that can take care of your children and help you during an emergency</li>
               <li>Keep all your important documents in a safe and secure place.</li>
@@ -64,7 +64,7 @@ class KnowYourRightsRoute extends React.Component {
           </div>
           <div className='RightsItem'>
             <div className='RightsItem-header'>REPORT IT!</div>
-            <ul className='RightsItem-listItem'>
+            <ul className='RightsItem-list'>
               <li> Call the Family Support Hotline! <span>855-435-7693</span></li>
               <li>In order to organize and take effective action, we need the community to report these incidents. Your information will 
             be kept confidential!</li>
