@@ -7,8 +7,9 @@ import { connect } from 'react-redux';
 import actions from 'actions';
 
 import ICIRRHeader from 'components/ICIRRHeader';
-import TabBar from 'components/TabBar';
+// import TabBar from 'components/TabBar';
 
+import DiscoverRoute from 'routes/DiscoverRoute';
 import EmergencyRoute from 'routes/EmergencyRoute';
 import KnowYourRightsRoute from 'routes/KnowYourRightsRoute';
 import MapRoute from 'routes/MapRoute';
@@ -34,12 +35,12 @@ class NavigationRoute extends React.Component {
 
   render() {
     // TODO (YK 2017-04-18): Memoize
-    const translatedTabs = _.map(NavigationRoute.tabs, (tab) => {
-      return {
-        ...tab,
-        name: this.props.translate(_.join(['navigation', 'tabs', tab.key], '.')),
-      };
-    });
+    // const translatedTabs = _.map(NavigationRoute.tabs, (tab) => {
+    //   return {
+    //     ...tab,
+    //     name: this.props.translate(_.join(['navigation', 'tabs', tab.key], '.')),
+    //   };
+    // });
     return (
       <div className='NavigationRoute'>
         <ICIRRHeader
@@ -50,11 +51,12 @@ class NavigationRoute extends React.Component {
             <Route path='/emergency' component={EmergencyRoute} />
             <Route path='/more' component={MoreRoute} />
             <Route path='/kyr' component={KnowYourRightsRoute} />
-            <Route path='/map' component={MapRoute} />
-            <Redirect from='*' to='/map' />
+            <Route path='/map/:filter' component={MapRoute} />
+            <Route path='/' component={DiscoverRoute} />
+            <Redirect from='*' to='/' />
           </Switch>
         </div>
-        <TabBar tabs={translatedTabs} tabClassName='NavigationRoute-tab' />
+        {/*<TabBar tabs={translatedTabs} tabClassName='NavigationRoute-tab' />*/}
       </div>
     );
   }

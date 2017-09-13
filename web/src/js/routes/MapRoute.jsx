@@ -25,6 +25,14 @@ class MapRoute extends React.Component {
     return shallowCompare(this, nextProps, nextState);
   }
 
+  componentWillMount() {
+    this.props.setSelectedFilter(this.props.match.params.filter);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.props.setSelectedFilter(nextProps.match.params.filter);
+  }
+
   handleFilterSelect(filterValue) {
     this.props.setSelectedFilter(filterValue);
   }
