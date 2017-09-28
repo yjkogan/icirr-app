@@ -28,23 +28,25 @@ const markers = _.map(naiPartners, (partner) => {
 
 const initialState = {
   markers,
-  selectedFilter: servicesConstants.hasCitizenshipClasses,
+  selectedFilters: [],
   selectedMarker: null,
 };
 
 export default function reducer(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
-    case 'SELECT_FILTER': {
-      return {
-        ...state,
-        selectedFilter: payload,
-      };
-    }
     case 'SELECT_MARKER': {
       return {
         ...state,
         selectedMarker: payload,
+      };
+    }
+    case 'TOGGLE_FILTER': {
+      const newSelectedFilters = _.includes(state.selectedFilters, payload) ?
+        _.without(state.selectedFilters, payload) : _.concat(state.selectedFilters, [payload]);
+      return {
+        ...state,
+        selectedFilters: newSelectedFilters,
       };
     }
     default:

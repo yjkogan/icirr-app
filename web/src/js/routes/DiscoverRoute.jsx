@@ -13,7 +13,7 @@ import { servicesFilterOptions } from 'constants/servicesConstants';
 
 import withTranslate from 'localization/withTranslate';
 
-class AboutICIRRRoute extends React.Component {
+class DiscoverRoute extends React.Component {
   constructor(props) {
     super(props);
     autoBind(this);
@@ -24,8 +24,9 @@ class AboutICIRRRoute extends React.Component {
   }
 
   handleClick(event) {
-    // console.debug('list item name', event.target.getAttribute('name'));
-    this.props.history.push(`/map/${event.target.getAttribute('name')}`)
+    const filterName = event.currentTarget.getAttribute('name');
+    this.props.actions.map.toggleFilter(filterName);
+    this.props.history.push('/map');
   }
 
   render() {
@@ -34,7 +35,11 @@ class AboutICIRRRoute extends React.Component {
         <div className='DiscoverRoute-servicesList'>
           {_.map(servicesFilterOptions, (serviceOption) => {
             return (
-              <ServiceListItem onClick={this.handleClick} {...serviceOption} />
+              <ServiceListItem
+                key={serviceOption.value}
+                onClick={this.handleClick}
+                {...serviceOption}
+              />
             );
           })}
         </div>
@@ -43,13 +48,11 @@ class AboutICIRRRoute extends React.Component {
   }
 }
 
-AboutICIRRRoute.propTypes = {
+DiscoverRoute.propTypes = {
   actions: React.PropTypes.object.isRequired,
   history: React.PropTypes.shape({
-    goBack: React.PropTypes.func.isRequired,
+    push: React.PropTypes.func.isRequired,
   }).isRequired,
-  selectedLanguage: React.PropTypes.string.isRequired,
-  translate: React.PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {
@@ -58,4 +61,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default withTranslate(withRouter(connect(mapStateToProps, actions)(AboutICIRRRoute)));
+export default withTranslate(withRouter(connect(mapStateToProps, actions)(DiscoverRoute)));

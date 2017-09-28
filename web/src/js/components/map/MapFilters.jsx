@@ -19,7 +19,7 @@ class MapFilters extends React.Component {
             <MapFiltersItem
               key={option.value}
               className='MapFilters-item'
-              isSelected={option.value === this.props.selectedFilter}
+              isSelected={_.includes(this.props.selectedFilters, option.value)}
               onClick={this.props.onSelect}
               {...option} />
           );
@@ -31,7 +31,7 @@ class MapFilters extends React.Component {
 
 MapFilters.propTypes = {
   onSelect: React.PropTypes.func.isRequired,
-  selectedFilter: React.PropTypes.string.isRequired,
+  selectedFilters: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 };
 
 export default MapFilters;
