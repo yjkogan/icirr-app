@@ -5,7 +5,7 @@ import shallowCompare from 'react-addons-shallow-compare';
 
 import withTranslate from 'localization/withTranslate';
 
-class MapFiltersItem extends React.Component {
+class ServicesFiltersItem extends React.Component {
   constructor(props) {
     super(props);
     autoBind(this);
@@ -31,7 +31,7 @@ class MapFiltersItem extends React.Component {
   }
 }
 
-MapFiltersItem.propTypes = {
+ServicesFiltersItem.propTypes = {
   className: React.PropTypes.string.isRequired,
   isSelected: React.PropTypes.bool.isRequired,
   onClick: React.PropTypes.func.isRequired,
@@ -39,4 +39,4 @@ MapFiltersItem.propTypes = {
   translate: React.PropTypes.func.isRequired,
 };
 
-export default withTranslate(MapFiltersItem);
+export default withTranslate(ServicesFiltersItem);

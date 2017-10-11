@@ -2,7 +2,7 @@ import autoBind from 'react-autobind';
 import React from 'react';
 import { InfoWindow, Marker } from 'react-google-maps';
 
-import PartnerInfo from 'components/map/PartnerInfo';
+import PartnerInfo from 'components/PartnerInfo';
 
 class MarkerWithInfoWindow extends React.Component {
   constructor(props) {

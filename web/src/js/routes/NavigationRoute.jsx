@@ -12,6 +12,7 @@ import EmergencyRoute from 'routes/EmergencyRoute';
 import KnowYourRightsRoute from 'routes/KnowYourRightsRoute';
 import MapRoute from 'routes/MapRoute';
 import MoreRoute from 'routes/MoreRoute';
+import OrganizationListRoute from 'routes/OrganizationListRoute';
 
 class NavigationRoute extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class NavigationRoute extends React.Component {
             <Route path='/more' component={MoreRoute} />
             <Route path='/kyr' component={KnowYourRightsRoute} />
             <Route path='/map' component={MapRoute} />
+            <Route path='/list' component={OrganizationListRoute} />
             <Route path='/' component={DiscoverRoute} />
             <Redirect from='*' to='/' />
           </Switch>

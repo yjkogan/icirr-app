@@ -4,7 +4,7 @@ import servicesConstants from 'constants/servicesConstants';
 
 import naiPartners from 'static/naiPartners.csv';
 
-const markers = _.map(naiPartners, (partner) => {
+const partners = _.map(naiPartners, (partner) => {
   return {
     defaultAnimation: 2,
     address: partner.address,
@@ -27,7 +27,7 @@ const markers = _.map(naiPartners, (partner) => {
 });
 
 const initialState = {
-  markers,
+  partners,
   selectedFilters: [],
   selectedMarker: null,
 };
@@ -39,6 +39,13 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         selectedMarker: payload,
+      };
+    }
+    case 'SET_FILTER': {
+      const newSelectedFilters = [payload];
+      return {
+        ...state,
+        selectedFilters: newSelectedFilters,
       };
     }
     case 'TOGGLE_FILTER': {

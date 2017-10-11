@@ -25,13 +25,20 @@ class DiscoverRoute extends React.Component {
 
   handleClick(event) {
     const filterName = event.currentTarget.getAttribute('name');
-    this.props.actions.map.toggleFilter(filterName);
-    this.props.history.push('/map');
+    this.props.actions.map.setFilter(filterName);
+    this.props.history.push('/list');
+  }
+
+  handleKYRClicked() {
+    this.props.history.push('/kyr');
   }
 
   render() {
     return (
       <div className='DiscoverRoute'>
+        <div className='DiscoverRoute-header'>
+          {this.props.translate('discover.header')}
+        </div>
         <div className='DiscoverRoute-servicesList'>
           {_.map(servicesFilterOptions, (serviceOption) => {
             return (
@@ -42,6 +49,20 @@ class DiscoverRoute extends React.Component {
               />
             );
           })}
+          <ServiceListItem
+            label={this.props.translate('discover.items.kyr')}
+            onClick={this.handleKYRClicked}
+            value='kyr'
+          />
+        </div>
+        <div className='DiscoverRoute-icirrInfoLink'>
+          {this.props.translate('discover.footerText')}&nbsp;
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='http://www.icirr.org/'>
+            {this.props.translate('discover.footerLink')}
+          </a>
         </div>
       </div>
     );
@@ -53,6 +74,7 @@ DiscoverRoute.propTypes = {
   history: React.PropTypes.shape({
     push: React.PropTypes.func.isRequired,
   }).isRequired,
+  translate: React.PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {

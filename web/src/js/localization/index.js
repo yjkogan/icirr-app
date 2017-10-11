@@ -16,6 +16,14 @@ const strings = new LocalizedStrings({
     header: {
       back: 'Back',
     },
+    discover: {
+      footerLink: 'ICIRR',
+      footerText: 'Built with love by',
+      header: 'I need help with...',
+      items: {
+        kyr: 'My rights',
+      },
+    },
     map: {
       filterLabels: {
         [servicesConstants.hasCitizenshipClasses]: 'Citizenship',
@@ -54,6 +62,14 @@ const strings = new LocalizedStrings({
     },
     header: {
       back: 'Espalda',
+    },
+    discover: {
+      footerLink: '(SP) ICIRR',
+      footerText: '(SP) Built with love by',
+      header: '(SP) I need help with...',
+      items: {
+        kyr: '(SP) My rights',
+      },
     },
     map: {
       filterLabels: {

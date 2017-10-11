@@ -1,5 +1,26 @@
-.DiscoverRoute-servicesList {
+.DiscoverRoute {
+  height: 100%;
   padding: 1.2rem;
+  position: relative;
+}
+
+.DiscoverRoute-header {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.DiscoverRoute-icirrInfoLink {
+  bottom: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.DiscoverRoute-servicesList {
+  padding: 1.2rem 0;
 }
 
 .DiscoverRoute-servicesListItem {

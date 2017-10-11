@@ -11,13 +11,13 @@ export const servicesFilterOptions = [{
   label: 'Citizenship',
   value: servicesConstants.hasCitizenshipClasses,
 }, {
-  label: 'English',
+  label: 'English classes',
   value: servicesConstants.hasEnglishClasses,
 }, {
-  label: 'Legal Aid',
+  label: 'Legal aid',
   value: servicesConstants.hasLegalAid,
 }, {
-  label: 'Education',
+  label: 'In my community',
   value: servicesConstants.hasOutreachAndEducation,
 }];
 

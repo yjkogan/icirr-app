@@ -7,12 +7,12 @@
   height: calc(100% - 3.6rem);
 }
 
-.MapFilters {
+.ServicesFilters {
   display: flex;
   height: 3.6rem;
 }
 
-.MapFilters-item {
+.ServicesFilters-item {
   border-right: 1px solid black;
   flex: 1 0 auto;
   font-size: 1.2rem;
@@ -24,7 +24,7 @@
   }
 }
 
-.MapFilters-item.is-selected {
+.ServicesFilters-item.is-selected {
   background-color: $icirr-light-purple;
   color: $white;
 }
