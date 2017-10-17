@@ -88,7 +88,6 @@ const partnersSelector = createSelector(
   (state) => state.map.selectedFilters,
   (partners, selectedFilters) => {
     return _.filter(partners, (marker) => {
-      // TODO: Rethink
       let matchAll = true;
       _.forEach(selectedFilters, (filter) => {
         matchAll = marker.services[filter] && matchAll;

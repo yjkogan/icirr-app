@@ -23,14 +23,14 @@ class DiscoverRoute extends React.Component {
     return shallowCompare(this, nextProps, nextState);
   }
 
-  handleClick(event) {
+  handleKYRClicked() {
+    this.props.history.push('/kyr');
+  }
+
+  handleServiceClicked(event) {
     const filterName = event.currentTarget.getAttribute('name');
     this.props.actions.map.setFilter(filterName);
     this.props.history.push('/list');
-  }
-
-  handleKYRClicked() {
-    this.props.history.push('/kyr');
   }
 
   render() {
@@ -44,7 +44,7 @@ class DiscoverRoute extends React.Component {
             return (
               <ServiceListItem
                 key={serviceOption.value}
-                onClick={this.handleClick}
+                onClick={this.handleServiceClicked}
                 {...serviceOption}
               />
             );
