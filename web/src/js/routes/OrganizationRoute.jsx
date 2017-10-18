@@ -42,7 +42,7 @@ class OrganizationRoute extends React.Component {
 
   render() {
     return (
-      <div className='MapRoute'>
+      <div className='OrganizationRoute'>
         <ServicesFilters onSelect={this.handleFilterSelect} selectedFilters={this.props.selectedFilters} />
         <Switch>
           <Route
@@ -63,9 +63,9 @@ class OrganizationRoute extends React.Component {
 
 OrganizationRoute.propTypes = {
   history: PropTypes.shape({
-    location: {
+    location: PropTypes.shape({
       pathname: PropTypes.string.isRequired,
-    },
+    }),
     replace: PropTypes.func.isRequired,
   }).isRequired,
   selectedFilters: PropTypes.arrayOf(PropTypes.string),
