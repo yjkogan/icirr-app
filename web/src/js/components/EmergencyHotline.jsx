@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -23,9 +24,9 @@ class EmergencyHotline extends React.Component {
 }
 
 EmergencyHotline.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  number: React.PropTypes.string.isRequired,
-  onInfoClick: React.PropTypes.func,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onInfoClick: PropTypes.func,
 };
 
 export default EmergencyHotline;

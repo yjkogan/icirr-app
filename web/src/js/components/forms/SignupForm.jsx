@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import shallowCompare from 'react-addons-shallow-compare';
@@ -36,8 +37,8 @@ class SignupForm extends React.Component {
 }
 
 SignupForm.propTypes = {
-  handleSubmit: React.PropTypes.func.isRequired,
-  translate: React.PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  translate: PropTypes.func.isRequired,
 };
 
 SignupForm = reduxForm({

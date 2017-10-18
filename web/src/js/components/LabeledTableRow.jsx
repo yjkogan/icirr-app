@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -16,7 +17,7 @@ class LabeledTableRow extends React.Component {
 }
 
 LabeledTableRow.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 

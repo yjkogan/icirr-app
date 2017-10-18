@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -29,10 +30,10 @@ class PartnerInfo extends React.Component {
 }
 
 PartnerInfo.propTypes = {
-  address: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  phone: React.PropTypes.number.isRequired,
-  website: React.PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  phone: PropTypes.number.isRequired,
+  website: PropTypes.string.isRequired,
 };
 
 export default PartnerInfo;

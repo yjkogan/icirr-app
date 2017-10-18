@@ -1,5 +1,6 @@
-import autoBind from 'react-autobind';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import autoBind from 'react-autobind';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -32,11 +33,11 @@ class ServicesFiltersItem extends React.Component {
 }
 
 ServicesFiltersItem.propTypes = {
-  className: React.PropTypes.string.isRequired,
-  isSelected: React.PropTypes.bool.isRequired,
-  onClick: React.PropTypes.func.isRequired,
-  value: React.PropTypes.string.isRequired,
-  translate: React.PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  translate: PropTypes.func.isRequired,
 };
 
 export default withTranslate(ServicesFiltersItem);

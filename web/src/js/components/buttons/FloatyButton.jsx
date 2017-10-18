@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -18,8 +19,8 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-  children:  React.PropTypes.any,
-  onClick: React.PropTypes.func,
+  children:  PropTypes.any,
+  onClick: PropTypes.func,
 };
 
 export default Button;

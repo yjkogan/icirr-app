@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import React from 'react';
 import { InfoWindow, Marker } from 'react-google-maps';
@@ -31,9 +32,9 @@ class MarkerWithInfoWindow extends React.Component {
 }
 
 MarkerWithInfoWindow.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  isSelected: React.PropTypes.bool.isRequired,
-  onClick: React.PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default MarkerWithInfoWindow;

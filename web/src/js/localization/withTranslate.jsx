@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import hoistStatics from 'hoist-non-react-statics';
@@ -37,8 +38,8 @@ const withTranslate = (Component) => {
   C.displayName = `withTranslate(${Component.displayName || Component.name})`;
   C.WrappedComponent = Component;
   C.propTypes = {
-    language: React.PropTypes.string.isRequired,
-    wrappedComponentRef: React.PropTypes.func
+    language: PropTypes.string.isRequired,
+    wrappedComponentRef: PropTypes.func
   };
 
   const ConnectedC = connect((state) => {

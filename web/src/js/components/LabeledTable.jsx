@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -21,13 +22,13 @@ class LabeledTable extends React.Component {
 }
 
 LabeledTable.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  className: React.PropTypes.string.isRequired,
-  label: React.PropTypes.oneOfType([
-    React.PropTypes.node,
-    React.PropTypes.string,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.string,
   ]),
-  modifierClassName: React.PropTypes.string,
+  modifierClassName: PropTypes.string,
 };
 
 LabeledTable.defaultProps = {

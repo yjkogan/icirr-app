@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -48,12 +49,12 @@ class AboutICIRRRoute extends React.Component {
 }
 
 AboutICIRRRoute.propTypes = {
-  actions: React.PropTypes.object.isRequired,
-  history: React.PropTypes.shape({
-    goBack: React.PropTypes.func.isRequired,
+  actions: PropTypes.object.isRequired,
+  history: PropTypes.shape({
+    goBack: PropTypes.func.isRequired,
   }).isRequired,
-  selectedLanguage: React.PropTypes.string.isRequired,
-  translate: React.PropTypes.func.isRequired,
+  selectedLanguage: PropTypes.string.isRequired,
+  translate: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {

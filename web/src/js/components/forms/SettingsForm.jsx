@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { reduxForm } from 'redux-form';
 import shallowCompare from 'react-addons-shallow-compare';
@@ -26,8 +27,8 @@ class SettingsForm extends React.Component {
 }
 
 SettingsForm.propTypes = {
-  onBlur: React.PropTypes.func.isRequired,
-  translate: React.PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
+  translate: PropTypes.func.isRequired,
 };
 
 SettingsForm = reduxForm({

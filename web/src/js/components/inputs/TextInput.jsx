@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Field } from 'redux-form';
 import shallowCompare from 'react-addons-shallow-compare';
@@ -26,12 +27,12 @@ class TextInput extends React.Component {
 }
 
 TextInput.propTypes = {
-  className: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string,
-  modifierClassName: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  onBlur: React.PropTypes.func,
-  placeholder: React.PropTypes.string,
+  className: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  modifierClassName: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  onBlur: PropTypes.func,
+  placeholder: PropTypes.string,
 };
 
 TextInput.defaultProps = {

@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -21,8 +22,8 @@ class Body extends React.Component {
 }
 
 Body.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  className: React.PropTypes.string,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default Body;

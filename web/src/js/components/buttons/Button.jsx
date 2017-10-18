@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -26,13 +27,13 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  disabled: React.PropTypes.bool,
-  className: React.PropTypes.string.isRequired,
-  modifierClassName: React.PropTypes.string.isRequired,
-  type: React.PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  className: PropTypes.string.isRequired,
+  modifierClassName: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   // FUNCTIONS
-  onClick: React.PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {

@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -30,8 +31,8 @@ class ServicesFilters extends React.Component {
 }
 
 ServicesFilters.propTypes = {
-  onSelect: React.PropTypes.func.isRequired,
-  selectedFilters: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  onSelect: PropTypes.func.isRequired,
+  selectedFilters: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default ServicesFilters;

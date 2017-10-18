@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import autoBind from 'react-autobind';
 import { Redirect, Route, Switch, withRouter } from 'react-router';
@@ -10,9 +11,8 @@ import ICIRRHeader from 'components/ICIRRHeader';
 import DiscoverRoute from 'routes/DiscoverRoute';
 import EmergencyRoute from 'routes/EmergencyRoute';
 import KnowYourRightsRoute from 'routes/KnowYourRightsRoute';
-import MapRoute from 'routes/MapRoute';
 import MoreRoute from 'routes/MoreRoute';
-import OrganizationListRoute from 'routes/OrganizationListRoute';
+import OrganizationRoute from 'routes/OrganizationRoute';
 
 class NavigationRoute extends React.Component {
   constructor(props) {
@@ -47,8 +47,7 @@ class NavigationRoute extends React.Component {
             <Route path='/emergency' component={EmergencyRoute} />
             <Route path='/more' component={MoreRoute} />
             <Route path='/kyr' component={KnowYourRightsRoute} />
-            <Route path='/map' component={MapRoute} />
-            <Route path='/list' component={OrganizationListRoute} />
+            <Route path='/orgs' component={OrganizationRoute} />
             <Route path='/' component={DiscoverRoute} />
             <Redirect from='*' to='/' />
           </Switch>
@@ -80,15 +79,15 @@ NavigationRoute.tabs = [
 ];
 
 NavigationRoute.propTypes = {
-  actions: React.PropTypes.object.isRequired,
-  history: React.PropTypes.shape({
-    goBack: React.PropTypes.func.isRequired,
-    length: React.PropTypes.number.isRequired,
-    location: React.PropTypes.shape({
-      pathname: React.PropTypes.string,
+  actions: PropTypes.object.isRequired,
+  history: PropTypes.shape({
+    goBack: PropTypes.func.isRequired,
+    length: PropTypes.number.isRequired,
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
     }),
   }).isRequired,
-  selectedLanguage: React.PropTypes.string.isRequired,
+  selectedLanguage: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = (state) => {

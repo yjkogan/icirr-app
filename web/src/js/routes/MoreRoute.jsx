@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import React from 'react';
 import { withRouter } from 'react-router';
@@ -48,10 +49,10 @@ class MoreRoute extends React.Component {
 }
 
 MoreRoute.propTypes = {
-  history: React.PropTypes.shape({
-    push: React.PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
   }).isRequired,
-  translate: React.PropTypes.func.isRequired,
+  translate: PropTypes.func.isRequired,
 };
 
 export default withTranslate(withRouter(MoreRoute));

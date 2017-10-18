@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
@@ -16,8 +17,8 @@ class HeaderButtonLeft extends React.Component {
 }
 
 HeaderButtonLeft.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  onClick: React.PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default HeaderButtonLeft;

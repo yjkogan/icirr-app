@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
@@ -16,7 +17,7 @@ class GoogleMapWrapper extends React.Component {
 }
 
 GoogleMapWrapper.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default withGoogleMap(GoogleMapWrapper);

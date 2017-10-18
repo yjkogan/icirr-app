@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -93,9 +94,9 @@ EmergencyRoute.hotlines = [{
 }];
 
 EmergencyRoute.propTypes = {
-  actions: React.PropTypes.object.isRequired,
-  lawyerNumber: React.PropTypes.string.isRequired,
-  translate: React.PropTypes.func.isRequired,
+  actions: PropTypes.object.isRequired,
+  lawyerNumber: PropTypes.string.isRequired,
+  translate: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {

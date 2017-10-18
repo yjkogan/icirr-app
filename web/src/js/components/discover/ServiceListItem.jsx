@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-
 import shallowCompare from 'react-addons-shallow-compare';
 
 class ServiceListItem extends React.Component {
@@ -18,9 +18,9 @@ class ServiceListItem extends React.Component {
 }
 
 ServiceListItem.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
-  value: React.PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default ServiceListItem;

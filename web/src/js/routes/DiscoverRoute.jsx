@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import React from 'react';
 import { withRouter } from 'react-router';
@@ -30,7 +31,7 @@ class DiscoverRoute extends React.Component {
   handleServiceClicked(event) {
     const filterName = event.currentTarget.getAttribute('name');
     this.props.actions.map.setFilter(filterName);
-    this.props.history.push('/list');
+    this.props.history.push('/orgs/list');
   }
 
   render() {
@@ -70,11 +71,11 @@ class DiscoverRoute extends React.Component {
 }
 
 DiscoverRoute.propTypes = {
-  actions: React.PropTypes.object.isRequired,
-  history: React.PropTypes.shape({
-    push: React.PropTypes.func.isRequired,
+  actions: PropTypes.object.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
   }).isRequired,
-  translate: React.PropTypes.func.isRequired,
+  translate: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {

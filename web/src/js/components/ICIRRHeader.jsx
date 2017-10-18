@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import autoBind from 'react-autobind';
 import shallowCompare from 'react-addons-shallow-compare';
@@ -34,10 +35,10 @@ class LanguageSelectorOption extends React.Component {
 }
 
 LanguageSelectorOption.propTypes = {
-  isSelected: React.PropTypes.bool.isRequired,
-  label: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
-  value: React.PropTypes.string.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 class ICIRRHeader extends React.Component {
@@ -82,10 +83,10 @@ ICIRRHeader.languageOptions = [{
 }];
 
 ICIRRHeader.propTypes = {
-  backButtonText: React.PropTypes.string,
-  onBack: React.PropTypes.func,
-  onSelectLanguage: React.PropTypes.func.isRequired,
-  selectedLanguage: React.PropTypes.string.isRequired,
+  backButtonText: PropTypes.string,
+  onBack: PropTypes.func,
+  onSelectLanguage: PropTypes.func.isRequired,
+  selectedLanguage: PropTypes.string.isRequired,
 };
 
 export default ICIRRHeader;

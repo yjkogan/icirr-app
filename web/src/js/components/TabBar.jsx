@@ -1,5 +1,6 @@
-import _ from 'lodash';
 import cx from 'classnames';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -27,12 +28,12 @@ class TabBar extends React.Component {
 }
 
 TabBar.propTypes = {
-  tabClassName: React.PropTypes.string,
-  tabs: React.PropTypes.arrayOf(React.PropTypes.shape({
-    className: React.PropTypes.string,
-    icon: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired,
-    to: React.PropTypes.string.isRequired,
+  tabClassName: PropTypes.string,
+  tabs: PropTypes.arrayOf(PropTypes.shape({
+    className: PropTypes.string,
+    icon: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
   })).isRequired,
 };
 

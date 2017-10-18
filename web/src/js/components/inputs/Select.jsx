@@ -1,5 +1,6 @@
-import _ from 'lodash';
 import cx from 'classnames';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Field } from 'redux-form';
 
@@ -27,15 +28,15 @@ class Select extends React.Component {
 }
 
 Select.propTypes = {
-  className: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  modifierClassName: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  onBlur: React.PropTypes.func,
-  onChange: React.PropTypes.func,
-  options: React.PropTypes.arrayOf(React.PropTypes.shape({
-    label: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  modifierClassName: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
   })),
 };
 
