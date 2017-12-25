@@ -55,10 +55,16 @@
     <div class='RightsItem'>
       <div class='RightsItem-header'>REPORT IT!</div>
       <ul class='RightsItem-list'>
-        <li> Call the Family Support Hotline! <span>855-435-7693</span></li>
+        <li>Call the Family Support Hotline!</li>
+        <li class='KYRRoute-hotlineLink'><a href='tel:855-435-7693'>855-435-7693</a></li>
         <li>In order to organize and take effective action, we need the community to report these incidents. Your information will 
       be kept confidential!</li>
       </ul>
+    </div>
+    <div class='RightsItem'>
+      For more information, or if you have any questions about your rights,
+      please contact ICIRR at <a href="info@icirr.org">info@icirr.org</a>
+      or visit <a target='_blank' rel='noopener noreferrer' href='http://www.icirr.org/'>icirr.org</a>.
     </div>
   </div>
 </div>

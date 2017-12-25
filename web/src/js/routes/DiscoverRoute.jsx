@@ -14,6 +14,20 @@ import { servicesFilterOptions } from 'constants/servicesConstants';
 
 import withTranslate from 'localization/withTranslate';
 
+const infoLinkItems = [{
+  href: 'http://www.icirr.org/news-events/events?show=citizenship-workshop',
+  value: 'nextWorkshop',
+}, {
+  href: 'https://www.uscis.gov/citizenship/educators/naturalization-information#eligibility_reqmts',
+  value: 'citizenshipRequirements',
+}, {
+  href: 'http://www.icirr.org/our-work/what-to-bring-to-a-workshop-que-llevar-a',
+  value: 'workshopWhatToBring',
+}, {
+  href: 'http://www.icirr.org/content/documents/agency_referral_12.2016.pdf',
+  value: 'lowCostLegalAidProviders',
+}];
+
 class DiscoverRoute extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +40,10 @@ class DiscoverRoute extends React.Component {
 
   handleKYRClicked() {
     this.props.history.push('/kyr');
+  }
+
+  handleOpenLink(href) {
+    window.open(href,'_blank','noopener');
   }
 
   handleServiceClicked(event) {
@@ -56,10 +74,18 @@ class DiscoverRoute extends React.Component {
         </div>
         <div className='DiscoverRoute-servicesList'>
           <ServiceListItem
-            label={this.props.translate('discover.items.kyr')}
             onClick={this.handleKYRClicked}
             value='kyr'
           />
+          {_.map(infoLinkItems, (linkItem) => {
+            return (
+              <ServiceListItem
+                href={linkItem.href}
+                onClick={this.handleOpenLink}
+                value={linkItem.value}
+              />
+            );
+          })}
         </div>
         <div className='DiscoverRoute-icirrInfoLink'>
           {this.props.translate('discover.footerText')}&nbsp;

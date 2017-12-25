@@ -19,11 +19,14 @@ const strings = new LocalizedStrings({
       infoHeader: "I'm looking for information about...",
       orgHeader: 'I need someone to help me with...',
       items: {
-        [servicesConstants.hasCitizenshipClasses]: 'Citizenship',
-        [servicesConstants.hasEnglishClasses]: 'English Classes',
-        [servicesConstants.hasLegalAid]: 'Legal Aid',
-        [servicesConstants.hasOutreachAndEducation]: 'In my community',
+        [servicesConstants.hasNaturalizationClasses]: 'Passing the Naturalization Interview',
+        [servicesConstants.hasLegalAid]: 'Applying for citizenship',
+        [servicesConstants.hasOutreachAndEducation]: 'Finding resources for citizenship',
         kyr: 'My rights',
+        nextWorkshop: 'The next citizenship workshop',
+        citizenshipRequirements: 'Requirements to become a citizen',
+        workshopWhatToBring: 'What to bring to a workshop',
+        lowCostLegalAidProviders: 'Low-cost immigration legal services providers',
       },
     },
     kyr: {
@@ -31,10 +34,9 @@ const strings = new LocalizedStrings({
     },
     map: {
       filterLabels: {
-        [servicesConstants.hasCitizenshipClasses]: 'Citizenship',
-        [servicesConstants.hasEnglishClasses]: 'English',
-        [servicesConstants.hasLegalAid]: 'Legal Aid',
-        [servicesConstants.hasOutreachAndEducation]: 'Education',
+        [servicesConstants.hasNaturalizationClasses]: 'Nat. Int.',
+        [servicesConstants.hasLegalAid]: 'Applying',
+        [servicesConstants.hasOutreachAndEducation]: 'Resources',
       },
     },
     navigation: {
@@ -56,11 +58,15 @@ const strings = new LocalizedStrings({
       infoHeader: 'Estoy buscando información de...',
       orgHeader: 'Necesito que alguien me ayude con...',
       items: {
-        [servicesConstants.hasCitizenshipClasses]: 'Ciudadanía',
-        [servicesConstants.hasEnglishClasses]: 'Clases de inglés',
+        [servicesConstants.hasNaturalizationClasses]: 'Ciudadanía',
         [servicesConstants.hasLegalAid]: 'Ayuda Legal',
         [servicesConstants.hasOutreachAndEducation]: 'En mi comunidad',
         kyr: 'Mis derechos',
+        nextWorkshop: 'The next citizenship workshop (SP)',
+        citizenshipRequirements: 'Requirements to become a citizen (SP)',
+        workshopWhatToBring: 'What to bring to a workshop (SP)',
+        lowCostLegalAidProviders: 'Low-cost immigration legal services providers  (SP)',
+
       },
     },
     kyr: {
@@ -68,8 +74,7 @@ const strings = new LocalizedStrings({
     },
     map: {
       filterLabels: {
-        [servicesConstants.hasCitizenshipClasses]: 'Ciudadanía',
-        [servicesConstants.hasEnglishClasses]: 'Inglés',
+        [servicesConstants.hasNaturalizationClasses]: 'Ciudadanía',
         [servicesConstants.hasLegalAid]: 'Abogado',
         [servicesConstants.hasOutreachAndEducation]: 'Educación',
       },

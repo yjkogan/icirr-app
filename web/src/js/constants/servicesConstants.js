@@ -1,16 +1,13 @@
 import keyMirror from 'key-mirror';
 
 const servicesConstants = keyMirror({
-  hasCitizenshipClasses: null,
-  hasEnglishClasses: null,
+  hasNaturalizationClasses: null,
   hasLegalAid: null,
   hasOutreachAndEducation: null,
 });
 
 export const servicesFilterOptions = [{
-  value: servicesConstants.hasCitizenshipClasses,
-}, {
-  value: servicesConstants.hasEnglishClasses,
+  value: servicesConstants.hasNaturalizationClasses,
 }, {
   value: servicesConstants.hasLegalAid,
 }, {

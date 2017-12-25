@@ -5,6 +5,7 @@ import servicesConstants from 'constants/servicesConstants';
 import naiPartners from 'static/naiPartners.csv';
 
 const partners = _.map(naiPartners, (partner) => {
+  const hasNaturalizationClasses = partner.hasCitizenshipClasses === 'True' || partner.hasEnglishClasses === 'True';
   return {
     defaultAnimation: 2,
     address: partner.address,
@@ -17,8 +18,7 @@ const partners = _.map(naiPartners, (partner) => {
       lng: partner.lng,
     },
     services: {
-      [servicesConstants.hasCitizenshipClasses]: partner.hasCitizenshipClasses === 'True',
-      [servicesConstants.hasEnglishClasses]: partner.hasEnglishClasses === 'True',
+      [servicesConstants.hasNaturalizationClasses]: hasNaturalizationClasses,
       [servicesConstants.hasLegalAid]: partner.hasLegalAid === 'True',
       [servicesConstants.hasOutreachAndEducation]: partner.hasOutreachAndEducation === 'True',
     },
